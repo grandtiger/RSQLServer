@@ -3,4 +3,5 @@
 .RData
 *.Rproj
 
-.Rhistory
+*.tss
+*.bak

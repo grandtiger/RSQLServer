@@ -2,10 +2,19 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>Team Explorer - Home</string>
+      <string>c:\users\hongooi\documents\github\rsqlserver\r\rsqlserver.r</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\hongooi\Documents\github\RSQLServer\R\RSQLServer.R</string>
+      <string>c:\users\hongooi\documents\github\rsqlserver\.gitignore</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\users\hongooi\documents\github\rsqlserver\.rbuildignore</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Team Explorer - Changes</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\hongooi\Documents\github\RSQLServer\appveyor.yml</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>
