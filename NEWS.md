@@ -50,7 +50,7 @@ SQL Server (#75)
 - `dbGetInfo()` for `SQLServerResult` has been deprecated and calls the DBI default method which calls `dbHasCompleted()`, `dbGetRowCount()` etc. The latter methods have been implemented for `SQLServerResult` and are exported.
 - `as.numeric()` and `as.character()` calls now cast scalar input values to SQL types `FLOAT` and `NVARCHAR(4000)` respectively rather than `NUMERIC` and `TEXT` respectively (default in dplyr). 
 - Now rely on DBI supplied `show()` methods
-- Added Travis-CI support
+- Added Travis-CI (#83, #84) and Appveyor support (#80, @Hong-Revo)
 
 # Version 0.2.0
 
