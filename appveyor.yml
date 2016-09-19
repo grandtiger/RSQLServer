@@ -12,7 +12,16 @@ install:
 
 # Adapt as necessary starting from here
 
+environment:
+  global:
+    R_ARCH: x64
+    USE_RTOOLS: true
+
 build_script:
+  - nuget install secure-file -ExcludeVersion
+  - secure-file\tools\secure-file -decrypt inst\extdata\sql.yamlwin.enc -secret %securepwd%
+  - move inst\extdata\sql.yamlwin %USERPROFILE%\documents\sql.yaml
+  - del inst\extdata\*.enc
   - travis-tool.sh install_deps
 
 test_script:
