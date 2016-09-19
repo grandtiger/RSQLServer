@@ -1,7 +1,8 @@
 # RSQLServer
 
-[![Travis-CI Build Status](https://travis-ci.org/imanuelcostigan/RSQLServer.svg?branch=master)](https://travis-ci.org/imanuelcostigan/RSQLServer)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/imanuelcostigan/RSQLServer?branch=master&svg=true)](https://ci.appveyor.com/project/imanuelcostigan/RSQLServer)
+[![CRAN](http://www.r-pkg.org/badges/version/RSQLServer)](http://cran.r-project.org/package=RSQLServer)
+[![Travis-CI build status](https://travis-ci.org/imanuelcostigan/RSQLServer.svg?branch=master)](https://travis-ci.org/imanuelcostigan/RSQLServer)
+[![Coverage status](https://codecov.io/gh/imanuelcostigan/RSQLServer/branch/master/graph/badge.svg)](https://codecov.io/gh/imanuelcostigan/RSQLServer)
 
 An R package that provides a SQL Server R Database Interface ([DBI](https://github.com/rstats-db/DBI)), based on the cross-platform [jTDS JDBC driver](http://jtds.sourceforge.net/index.html).
 
@@ -19,8 +20,6 @@ Or try the development version from GitHub:
 # install.packages('devtools')
 devtools::install_github('imanuelcostigan/RSQLServer')
 ```
-
-NB: This package has been tested on Windows 7 x64 (>= 6.1) and OSX. 
 
 ## Config file
 

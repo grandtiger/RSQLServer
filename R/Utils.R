@@ -120,14 +120,6 @@ pull_class_path <- function () {
   file.path(system.file('java', package = 'RSQLServer'), "MSSQLRequestPull.jar")
 }
 
-rebuild_pull_class_jar <- function () {
-  system("rm inst/java/MSSQLRequestPull.jar")
-  # Using Java 1.3 as this is what jTDS is built with
-  system("javac -d inst/java -source 1.3 -target 1.3 java/*.java")
-  system("(cd inst/java; jar fvc MSSQLRequestPull.jar com; rm -rf com)")
-}
-
-
 # Fetch helpers ----------------------------------------------------------
 
 ff <- function (res, empty_vector) {
@@ -178,6 +170,12 @@ fetch_rp <- function (rp, out, cts = NULL) {
   out
 }
 
+rp_to_r_type_map <- function (ctypes) {
+  rp_to_r <- purrr::set_names(0:5,
+    c("character", "numeric", "integer", "character", "character", "logical"))
+  assertthat::assert_that(all(ctypes %in% rp_to_r))
+  names(rp_to_r)[match(ctypes, rp_to_r)]
+}
 
 # SQL types --------------------------------------------------------------
 
