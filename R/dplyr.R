@@ -72,6 +72,8 @@ copy_to.src_sqlserver <- function (dest, df, name = NULL, types = NULL,
 
   con <- con_acquire(dest)
   tryCatch({
+    types <- types %||% db_data_type(con, df)
+    names(types) <- names(df)
     if (isTRUE(db_has_table(con, name))) {
       stop("Table ", name, " already exists.", call. = FALSE)
     }
@@ -86,8 +88,7 @@ copy_to.src_sqlserver <- function (dest, df, name = NULL, types = NULL,
   }, finally = {
     con_release(dest, con)
   })
-
-  tbl(dest, name)
+  invisible(tbl(dest, name))
 }
 
 
